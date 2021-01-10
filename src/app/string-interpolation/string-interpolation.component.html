@@ -1,0 +1,22 @@
+<mat-card class="myCard">
+    <mat-card-header>
+      <mat-card-title>Person Data (String Interpolation)</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <p>Frist Name: {{person.fristName}}</p>
+        <p>Frist Name: {{person.lastName}}</p>
+        <p>Age: {{person.age}}</p>
+        <p>Address: {{person.address}}</p>
+        <form>
+            <mat-form-field>
+              <mat-label>Name</mat-label>
+              <input matInput placeholder="Name" value="{{person.fristName}}">
+            </mat-form-field>
+          </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+  

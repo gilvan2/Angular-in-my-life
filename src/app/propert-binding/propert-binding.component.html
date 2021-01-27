@@ -1,1 +1,13 @@
-<p>propert-binding works!</p>
+<mat-card class="myCard">
+    <mat-card-header>
+        <mat-card-title>Propert Binding</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <button mat-button [color] = "color">Button 1</button>
+        <button mat-button [disabled] = "btnDisabled">Button 2</button>
+        <button mat-button [color] = "colors[idx]">Button 3</button>
+    </mat-card-content>
+</mat-card>
+
+
+

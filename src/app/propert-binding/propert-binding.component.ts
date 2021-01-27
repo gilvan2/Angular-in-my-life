@@ -9,7 +9,19 @@ export class PropertBindingComponent implements OnInit {
 
   constructor() { }
 
+  color = "accent";
+
+  btnDisabled = true;
+
+  colors = ["","primary","accent","warn",];
+
+  idx = 0;
+
   ngOnInit(): void {
+
+    setInterval(()=>{
+      this.idx = ( ++ this.idx ) % this.colors.length; 
+    },500)
   }
 
 }

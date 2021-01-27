@@ -8,12 +8,14 @@ import { MatCardModule } from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button'; 
 import {MatInputModule} from '@angular/material/input';
 import { PropertBindingComponent } from './propert-binding/propert-binding.component';
+import { EventBindingComponent } from './event-binding/event-binding.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StringInterpolationComponent,
-    PropertBindingComponent
+    PropertBindingComponent,
+    EventBindingComponent
   ],
   imports: [
     BrowserModule,

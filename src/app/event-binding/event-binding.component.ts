@@ -13,10 +13,12 @@ export class EventBindingComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  buttonName = "My Button";
+  buttonName = "My increment button";
   count = 0;
   btnEnable = true;
   mode: ProgressSpinnerMode = 'determinate';
+  cbEnable=false;
+  selectOption="";
 
   click(){
     console.log("Identify a click action");
@@ -34,5 +36,13 @@ export class EventBindingComponent implements OnInit {
       this.btnEnable = true;  
       this.mode = "determinate";
     },2000)
+  }
+
+  cbChange(event:boolean){
+    this.cbEnable=event;
+  }
+
+  selectionChange(event:any){
+    this.selectOption=event.value;
   }
 }

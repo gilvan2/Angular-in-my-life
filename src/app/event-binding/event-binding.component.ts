@@ -13,11 +13,12 @@ export class EventBindingComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  buttonName = "My Button";
+  buttonName = "My increment button";
   count = 0;
   btnEnable = true;
   mode: ProgressSpinnerMode = 'determinate';
   cbEnable=false;
+  selectOption="";
 
   click(){
     console.log("Identify a click action");
@@ -36,9 +37,12 @@ export class EventBindingComponent implements OnInit {
       this.mode = "determinate";
     },2000)
   }
-  //Implementar um check mat check box que habilite/ desabilite um mat select e depois, 
-  //mostrar o valor selecionado dentro do mat select
+
   cbChange(event:boolean){
     this.cbEnable=event;
+  }
+
+  selectionChange(event:any){
+    this.selectOption=event.value;
   }
 }

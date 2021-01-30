@@ -8,7 +8,7 @@
         <section>
             <button mat-button 
                 color="primary" 
-                (click)="click()">Save
+                (click)="click()">Show in console
             </button>
             <button mat-button 
                 color="warn" 
@@ -38,22 +38,29 @@
         <section>
             <p>
                 <mat-checkbox color="warn" 
-                    (change)="cbChange($event.checked)">Enabed / Disabled
+                    (change)="cbChange($event.checked)"> Disable / Enable 
                 </mat-checkbox>
             </p>
             <p>
                 <mat-form-field appearance="fill">
-                    <mat-label>Cars</mat-label>
-                    <select matNativeControl required [disabled]="!cbEnable">
-                        <option value="1">Volvo</option>
-                        <option value="2">Saab</option>
-                        <option value="3">Mercedes</option>
-                        <option value="4">Audi</option>
-                    </select>
+                    <mat-label>Selects</mat-label>
+                    <mat-select matNativeControl required 
+                    [disabled]="!cbEnable"
+                    (selectionChange)="selectionChange($event)">
+                        <mat-option value="1">Select 1</mat-option>
+                        <mat-option value="2">Select 2</mat-option>
+                        <mat-option value="3">Select 3</mat-option>
+                        <mat-option value="4">Select 4</mat-option>
+                    </mat-select>
                 </mat-form-field>
             </p>
             
         </section>
     </mat-card-content>
+    <mat-card-options>
+        <p>
+            Selected Option {{selectOption}}
+        </p>
+    </mat-card-options>
 </mat-card>
 

@@ -6,19 +6,39 @@
     </mat-card-header>
     <mat-card-content>
         <section>
-            <button mat-button color="primary" (click)="click()">Save</button>
-            <button mat-button color="warn" (click)="add()">{{buttonName}}</button>    
-        </section>
-        
+            <button mat-button 
+                color="primary" 
+                (click)="click()">Save
+            </button>
+            <button mat-button 
+                color="warn" 
+                (click)="add()">{{buttonName}}
+            </button>    
+        </section>        
         <section>
-            <button mat-button color ="primary" [disabled]="!btnEnable">Button 1</button>
-            <button mat-button color ="accent" [disabled]="!btnEnable">Button 2</button>
-            <button mat-button color ="warn" [disabled]="!btnEnable" (click)="desabled()">Disable</button>
+            <button mat-button 
+                color ="primary" 
+                [disabled]="!btnEnable">Button 1
+            </button>
+            <button mat-button 
+                color ="accent" 
+                [disabled]="!btnEnable">Button 2
+            </button>
+            <button mat-button 
+                color ="warn" 
+                [disabled]="!btnEnable" 
+                (click)="desabled()">Disable
+            </button>
             <mat-spinner
                 color="primary"
                 [mode]="mode"
                 [value]="count">
             </mat-spinner>
+        </section>
+        <section>
+            <mat-checkbox color="warn" 
+                (change)="cbChange($event.checked)">Enabed / Disabled
+            </mat-checkbox>
         </section>
     </mat-card-content>
 </mat-card>

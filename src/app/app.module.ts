@@ -11,6 +11,7 @@ import { PropertBindingComponent } from './propert-binding/propert-binding.compo
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatInputModule,
     MatProgressSpinnerModule,
     MatCheckboxModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

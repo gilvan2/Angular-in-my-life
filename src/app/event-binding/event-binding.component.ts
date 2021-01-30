@@ -17,6 +17,7 @@ export class EventBindingComponent implements OnInit {
   count = 0;
   btnEnable = true;
   mode: ProgressSpinnerMode = 'determinate';
+  cbEnable=false;
 
   click(){
     console.log("Identify a click action");
@@ -38,6 +39,6 @@ export class EventBindingComponent implements OnInit {
   //Implementar um check mat check box que habilite/ desabilite um mat select e depois, 
   //mostrar o valor selecionado dentro do mat select
   cbChange(event:boolean){
-    console.log(event);
+    this.cbEnable=event;
   }
 }

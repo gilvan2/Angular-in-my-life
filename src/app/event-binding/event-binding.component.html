@@ -36,9 +36,23 @@
             </mat-spinner>
         </section>
         <section>
-            <mat-checkbox color="warn" 
-                (change)="cbChange($event.checked)">Enabed / Disabled
-            </mat-checkbox>
+            <p>
+                <mat-checkbox color="warn" 
+                    (change)="cbChange($event.checked)">Enabed / Disabled
+                </mat-checkbox>
+            </p>
+            <p>
+                <mat-form-field appearance="fill">
+                    <mat-label>Cars</mat-label>
+                    <select matNativeControl required [disabled]="!cbEnable">
+                        <option value="1">Volvo</option>
+                        <option value="2">Saab</option>
+                        <option value="3">Mercedes</option>
+                        <option value="4">Audi</option>
+                    </select>
+                </mat-form-field>
+            </p>
+            
         </section>
     </mat-card-content>
 </mat-card>

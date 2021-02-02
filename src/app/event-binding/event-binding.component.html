@@ -14,7 +14,8 @@
                 color="warn" 
                 (click)="add()">{{buttonName}}
             </button>    
-        </section>        
+        </section>
+        <!--<mat-divider></mat-divider>-->        
         <section>
             <button mat-button 
                 color ="primary" 
@@ -35,6 +36,7 @@
                 [value]="count">
             </mat-spinner>
         </section>
+        <!--<mat-divider></mat-divider>-->
         <section>
             <p>
                 <mat-checkbox color="warn" 
@@ -54,13 +56,28 @@
                     </mat-select>
                 </mat-form-field>
             </p>
+            <p>
+                Selected Option {{selectOption}}
+            </p>
             
         </section>
+        <!--<mat-divider></mat-divider>-->
+        <section>
+            <p>
+                Event Binding + Propert Biding + String Interpolation
+            </p>
+
+            <mat-form-field class="example-full-width">
+                <mat-label>Word</mat-label>
+                <input matInput placeholder="Enter a word!" (input)="inputEvent($event)" [value] = "fristName">
+            </mat-form-field>
+
+            <p>Frist Name {{fristName}}</p> 
+
+        </section>
     </mat-card-content>
-    <mat-card-options>
-        <p>
-            Selected Option {{selectOption}}
-        </p>
-    </mat-card-options>
+    <mat-card-actions>
+
+    </mat-card-actions>
 </mat-card>
 

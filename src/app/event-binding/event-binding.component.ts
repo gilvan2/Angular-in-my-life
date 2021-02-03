@@ -19,7 +19,7 @@ export class EventBindingComponent implements OnInit {
   mode: ProgressSpinnerMode = 'determinate';
   cbEnable=false;
   selectOption="";
-  fristName="";
+  inputWord="";
 
   click(){
     console.log("Identify a click action");
@@ -48,7 +48,7 @@ export class EventBindingComponent implements OnInit {
   }
 
   inputEvent(event:any){
-    console.log(event);
-    this.fristName = event.target.value;
+    this.inputWord = event.target.value;
   }
+
 }

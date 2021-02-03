@@ -28,7 +28,7 @@
             <button mat-button 
                 color ="warn" 
                 [disabled]="!btnEnable" 
-                (click)="desabled()">Disable
+                (click)="desabled()">Disable and run spinner
             </button>
             <mat-spinner
                 color="primary"
@@ -36,7 +36,7 @@
                 [value]="count">
             </mat-spinner>
         </section>
-        <!--<mat-divider></mat-divider>-->
+        <mat-divider></mat-divider>
         <section>
             <p>
                 <mat-checkbox color="warn" 
@@ -59,20 +59,26 @@
             <p>
                 Selected Option {{selectOption}}
             </p>
-            
         </section>
-        <!--<mat-divider></mat-divider>-->
+        <mat-divider></mat-divider>
         <section>
+            <br>
+            <br>
             <p>
-                Event Binding + Propert Biding + String Interpolation
+                Event Binding + Propert Biding + String Interpolation = Two Way Data Binding
             </p>
 
             <mat-form-field class="example-full-width">
-                <mat-label>Word</mat-label>
-                <input matInput placeholder="Enter a word!" (input)="inputEvent($event)" [value] = "fristName">
+                <mat-label>Input Word</mat-label>
+                <input matInput placeholder="Enter a word!" 
+                (input)="inputEvent($event)" 
+                [value] = "inputWord">
+                <!-- (input)="inputWord = $event.target.value" Gera o erro 
+                    error TS2339: Property 'value' does not exist on type 'EventTarget'
+                Ver o por que -->
             </mat-form-field>
 
-            <p>Frist Name {{fristName}}</p> 
+            <p>Input Word {{inputWord}}</p> 
 
         </section>
     </mat-card-content>

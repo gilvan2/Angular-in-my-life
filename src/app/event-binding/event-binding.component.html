@@ -72,7 +72,7 @@
                 <mat-label>Input Word</mat-label>
                 <input matInput placeholder="Enter a word!" 
                 (input)="inputEvent($event)" 
-                [value] = "inputWord">
+                [value]="inputWord">
                 <!-- (input)="inputWord = $event.target.value" Gera o erro 
                     error TS2339: Property 'value' does not exist on type 'EventTarget'
                 Ver o por que -->

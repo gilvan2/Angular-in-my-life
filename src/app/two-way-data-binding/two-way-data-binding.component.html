@@ -1,0 +1,30 @@
+<section>
+    <mat-card style="margin: 20px;">
+        <mat-card-header>
+            <mat-card-title>
+                Two Way Data Binding
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <p>
+                Obrigatório importar  FormsModule from '@angular/forms'; no app.module.ts
+            </p>
+            <form>
+                <mat-form-field style="width: 100%;">
+                    <input matInput placeholder=" Enter your name"
+                    [(ngModel)]="name1" 
+                    name = anyNAme1>
+                </mat-form-field>
+                <mat-form-field style="width: 100%;">
+                    <input matInput placeholder=" Enter your name"
+                    [(ngModel)]="name2"
+                    name = anyName2>
+                </mat-form-field>
+            </form>
+        </mat-card-content>
+        <mat-card-actions>
+            <p>{{name1}}</p>
+            <p>{{name2}}</p>
+        </mat-card-actions>
+    </mat-card>
+</section>

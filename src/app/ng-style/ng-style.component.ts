@@ -12,7 +12,7 @@ export class NgStyleComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  myFontSize = "10px";
-  myFontColor = "green";
+  myFontSize = "12px";
+  myFontColor = "blue";
 
 }
